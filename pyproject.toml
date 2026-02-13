@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "refactor-ai"
+version = "0.1.0"
+description = "AI-powered CLI to enhance, document, and clean GitHub repositories."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "typer[all]",
+    "rich",
+    "questionary",
+    "keyring",
+    "openai",
+    "anthropic",
+    "google-generativeai",
+    "gitpython",
+    "PyGithub"
+]
+
+[project.scripts]
+# This line creates the 'refactor' command in your terminal
+refactor = "refactor_ai.main:app"

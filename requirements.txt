@@ -1,0 +1,16 @@
+# --- Core CLI Framework ---
+typer[all]          # For parsing commands and arguments (enhanced version)
+rich                # For beautiful terminal output (tables, colors, markdown)
+questionary         # For interactive menus (arrow keys) and hidden password inputs
+
+# --- Security ---
+keyring             # To securely store API keys in your OS Keychain/Credential Manager
+
+# --- AI Providers ---
+openai              # Official SDK for GPT-4o, GPT-3.5
+anthropic           # Official SDK for Claude 3 (Opus, Sonnet, Haiku)
+google-generativeai # Official SDK for Gemini (1.5 Pro, Flash)
+
+# --- Version Control ---
+gitpython           # For local git operations (commit, push, checkout)
+PyGithub            # For GitHub API interaction (creating Pull Requests, forking)

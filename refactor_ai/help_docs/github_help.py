@@ -12,17 +12,38 @@ Directly manage your GitHub repositories from the command line without AI interf
 
 ## Available Commands
 
+* `download`    - Download a repo/folder and generate AI metadata.
 * `create-repo` - Create a new public or private repository.
 * `add-file`    - Create or upload a file to a repository.
 * `help`        - Show this help message or details for a specific command.
 
 ## Usage Examples
 
+**Download a repo for AI analysis:**
+`refactor github download https://github.com/owner/repo ./my_local_copy metadata.json`
+
 **Create a private repository:**
 `refactor github create-repo my-new-project --private`
 
 **Upload a local file:**
 `refactor github add-file owner/repo src/main.py ./local_script.py`
+    """,
+    
+    "download": """
+# Command: download
+
+Downloads a repository (or a specific folder within it) and generates a metadata JSON file. This is crucial for giving the AI context about the project structure.
+
+## Syntax
+`refactor github download [URL] [OUTPUT_FOLDER] [METADATA_FILE]`
+
+## Arguments
+* `URL`: The GitHub URL (e.g., `https://github.com/owner/repo` or `.../tree/main/src`).
+* `OUTPUT_FOLDER`: The local folder where files will be saved.
+* `METADATA_FILE`: (Optional) Name of the JSON file containing the file tree (default: `repo_metadata.json`).
+
+## Example
+`refactor github download https://github.com/user/project ./analysis custom_tree.json`
     """,
     
     "create-repo": """
